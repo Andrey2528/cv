@@ -1,0 +1,685 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Резюме</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="93ba4f55-875d-4361-9a3a-61f05480bac4" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_10.jpg" style="object-position:center 7.889999999999997%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">📜</span></div><h1 class="page-title">Резюме</h1><p class="page-description"></p></header><div class="page-body"><div id="4777f2d4-60f4-40a1-89f1-d7938d6404e5" class="column-list"><div id="292a9c48-ba37-4435-b8e4-944addb38188" style="width:39.13043478260869%" class="column"><figure id="9cc8c1ac-b2dd-4466-a3fb-b276c326d202" class="image"><a href="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/photo_2023-12-21_09.39.19-2.jpeg"><img style="width:466px" src="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/photo_2023-12-21_09.39.19-2.jpeg"/></a></figure></div><div id="7fdcf304-f9c2-439d-bd98-074f7bca16e5" style="width:60.86956521739133%" class="column"><h1 id="5044602d-f23e-4fc8-a123-3021382fff9b" class="block-color-blue_background">Жуков Андрій</h1><p id="144c5f4e-26b6-4041-8cb5-42c4e8334f86" class="block-color-blue_background">FRONT-END РОЗРОБНИК</p><hr id="ff356876-28c0-4798-892d-b37d989f8a69"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Про себе</summary><div class="indented"><p id="fc47f005-5a0d-4d4d-b1a4-eaccaa458cc8" class="">Адаптуюся до будь-яких умов<br/>роботи, правильно розподіляю<br/>робочий час, вмію працювати в<br/>команді. Маю досвід роботи у<br/>різних сферах IT.<br/>Комунікабельний, неконфліктний,<br/>відповідальний. Дуже швидко<br/>розбираюсь в нових технологіях.<br/></p></div></details><hr id="bc98f79e-ce10-44f8-99b0-717426942bc6"/><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">Контакти</summary><div class="indented"><p id="ff177bbc-1043-4b77-a74d-ed986e9b6c6f" class="">Телефон: +380 (97) 379-55-87<br/>Пошта: <br/><a href="mailto:Zhukovandrey02@gmail.com">Zhukovandrey02@gmail.com</a><br/>Телеграм: @Andruh_a<br/>GitHub: <br/><a href="https://github.com/Andrey2528">https://github.com/Andrey2528</a> </p></div></details><hr id="57ac76d1-e0d0-4d8d-a4a1-e31fd87f6a6c"/><ul id="aeee1cb6-b19f-4d1e-b62e-9798325b768f" class="block-color-blue_background toggle"><li><details open=""><summary>Навички</summary><ul id="8998f7bf-4eec-4bfb-b8ff-37564ce001ea" class="bulleted-list"><li style="list-style-type:disc">Створення тем для WordPress;</li></ul><ul id="0f43d733-23c0-4a84-8f6c-500359a7abc8" class="bulleted-list"><li style="list-style-type:disc">Методологія БЕМ;</li></ul><ul id="e0a31363-9f50-4462-8b68-70feb9f743a2" class="bulleted-list"><li style="list-style-type:disc">Швидке створення адаптивних сайтів;</li></ul><ul id="30758ad9-d343-437b-992b-0ad7822395b3" class="bulleted-list"><li style="list-style-type:disc">Розміщення сайтів на хості;</li></ul><ul id="18fdfe28-c298-48ba-a04b-5e33b7a4ba67" class="bulleted-list"><li style="list-style-type:disc">Робота з Git;</li></ul><ul id="a5b9beba-b8a4-4187-88de-431ac5a8c06a" class="bulleted-list"><li style="list-style-type:disc">Знання кросбраузерної верстки;</li></ul><ul id="6b09fe37-07fb-4723-9738-c38c2fd5a592" class="bulleted-list"><li style="list-style-type:disc">Моделювання та розробка веб-додатків;</li></ul><ul id="03203ff4-be21-4abf-9e71-af7fd6758485" class="bulleted-list"><li style="list-style-type:disc">Патерни програмування: MVS, MVC;</li></ul><ul id="5868e199-f86b-4c49-9b6b-cad2674b838d" class="bulleted-list"><li style="list-style-type:disc">Досвід роботи з MySQL, MongoDB;</li></ul><ul id="04454445-1d44-4b74-8236-5cd2d04bda5a" class="bulleted-list"><li style="list-style-type:disc">Розробка ботів для Telegram, Discord;</li></ul><ul id="41969424-952d-4378-b25f-81248c0a6f89" class="bulleted-list"><li style="list-style-type:disc">Знання інших мов програмування.</li></ul></details></li></ul><hr id="7b315839-d25e-4fd7-adb7-d0b4bf0d818f"/><p id="6fc4a5d6-8a8d-40d4-ab86-f4743d24f084" class="">
+</p></div></div><div id="1856a3ae-752e-4f4d-921b-1c3750dc1d3f" class="column-list"><div id="4d25614a-354c-45c3-b707-551c16422bc9" style="width:50%" class="column"><p id="4103f479-f5da-458c-8341-0915a2230381" class="">
+</p></div><div id="77cc7446-069a-4c84-8874-83ba8b9f241d" style="width:50%" class="column"><p id="09b721d9-8210-4670-8865-620d81b9f5f6" class="">
+</p></div></div><h1 id="5c97f151-31fd-4b91-adc3-c3bdc55a4453" class="">Досвід роботи</h1><ul id="312f65f7-9f30-4949-9f95-370e30c42ffb" class="toggle"><li><details open=""><summary>МІСЦЕ РОБОТИ</summary><h3 id="5d2da32c-33ab-4af0-827e-07a12058d329" class="">🛠️ <strong>Meat Hammer Studio</strong></h3><p id="0926d296-bc53-45e0-816a-21b541ca4344" class="">(Вересень 2020 – березень 2023) - web-розробник, SMM-спеціаліст, адміністратор соціальних мереж, менеджер проєкту.</p><h3 id="851d357e-bfa5-458e-89fd-1dbfe9a60a34" class="">🥼 <strong>Project Hope The people to people foundation</strong></h3><p id="f8b15165-19f9-422c-abb0-c6544e15d02f" class=""> (березень 2023 – вересень 2023) – оператор вводу даних.</p></details></li></ul><p id="d5adcc3e-ab8a-4d68-b5be-dc966b100db4" class=""><br/><br/></p><table id="44544dcc-9d2a-4431-b7d6-f7bf73ef40a1" class="simple-table"><thead class="simple-table-header"><tr id="77c69fd8-1854-4f77-bf68-74c2d6ecdf95"><th id="sg^p" class="block-color-blue_background simple-table-header" style="width:588px"><strong>Мови програмування</strong></th><th id="?^;W" class="block-color-blue_background simple-table-header" style="width:663px">Досвід роботи</th></tr></thead><tbody><tr id="5d435731-9524-41df-89af-5fc296e57e06"><td id="sg^p" class="" style="width:588px">HTML5</td><td id="?^;W" class="" style="width:663px">3 роки</td></tr><tr id="9c206db6-6f45-4e4f-aab4-03fe1d85e942"><td id="sg^p" class="" style="width:588px">CSS3</td><td id="?^;W" class="" style="width:663px">3 роки</td></tr><tr id="a0f67eff-6e9c-40db-b110-59705bd56d62"><td id="sg^p" class="" style="width:588px">PHP</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="fbe4c646-5b9b-4614-a120-ee375e0ca36d"><td id="sg^p" class="" style="width:588px">JavaScript</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="930d29eb-fcb7-4120-ad7c-a8f1924fe29e"><td id="sg^p" class="block-color-blue_background" style="width:588px"><strong>ФРЕЙМВОРКИ ТА БІБЛІОТЕКИ</strong></td><td id="?^;W" class="block-color-blue_background" style="width:663px">Досвід роботи</td></tr><tr id="6ca78f3d-b133-4cb6-81ab-c557bd7caa0a"><td id="sg^p" class="" style="width:588px">Bootstrap</td><td id="?^;W" class="" style="width:663px">3 роки</td></tr><tr id="6d9c1418-8f47-4829-be80-dea6b18226b3"><td id="sg^p" class="" style="width:588px">Sass, Scss</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="6d8d29bd-74a6-4489-b6aa-195e94db3d09"><td id="sg^p" class="" style="width:588px">JQuery</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="b986712c-280a-4646-8a29-f44b78bdd4c2"><td id="sg^p" class="" style="width:588px">Node.js</td><td id="?^;W" class="" style="width:663px">1 рік</td></tr><tr id="4d694a97-a6c5-45b2-9f33-3c3ef61b5cb7"><td id="sg^p" class="" style="width:588px">React.js</td><td id="?^;W" class="" style="width:663px">1 рік</td></tr><tr id="965f30fc-296b-4471-849b-fa5a34a1c198"><td id="sg^p" class="" style="width:588px">Gulp</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="172163fd-9ba5-4b54-9661-cf7dc212c8c9"><td id="sg^p" class="" style="width:588px">Webpack, Vite</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="14ed4d69-d50e-425f-982d-e20e9a7e5b1c"><td id="sg^p" class="" style="width:588px">NPM, Yarn</td><td id="?^;W" class="" style="width:663px">2 роки</td></tr><tr id="b1338044-611e-428a-861f-01e51a2e9589"><td id="sg^p" class="block-color-blue_background" style="width:588px"><strong>ІНСТРУМЕНТИ</strong></td><td id="?^;W" class="block-color-blue_background" style="width:663px">Досвід роботи</td></tr><tr id="902f8d6c-4fd2-4f52-821f-3eb5d1ee87d7"><td id="sg^p" class="" style="width:588px">Visual Studio Code</td><td id="?^;W" class="" style="width:663px">3 роки</td></tr><tr id="e9f40c1a-ed5c-4ac4-a3ca-cbd920f25adc"><td id="sg^p" class="" style="width:588px">PHPStorm, WebStorm</td><td id="?^;W" class="" style="width:663px">3 роки</td></tr><tr id="31ff207a-cf4c-4524-b155-eb237a987a7a"><td id="sg^p" class="" style="width:588px">Figma, Photoshop</td><td id="?^;W" class="" style="width:663px">3 роки</td></tr></tbody></table><hr id="6c22f716-f9ed-4f82-a176-81f80b912e47"/><hr id="ed29241a-c775-4693-8eba-33499ca3a2b5"/><h1 id="164e524c-7600-41c8-86fe-0ba093b5ce21" class=""><mark class="highlight-default">Проєкти</mark></h1><h2 id="15bef5da-291d-40d4-9836-4404b13a1c96" class=""><strong>PEOPLE TOBACCO</strong></h2><p id="4cb27155-e3a1-4278-a341-97331a99c322" class=""><br/>Односторінковий сайт-візитка продукції заправка для кальянів. Робота в Meat Hammer Studio.<br/><br/><strong>Стек технологій:</strong> HTML, CSS, JS, JQuery, Scss, БЕМ-методологія, адаптивна верстка.</p><p id="7d7f0349-cf38-4f29-9cc2-871b0755d087" class="">
+</p><figure id="0873d6e6-9e77-4d18-94ff-4aceec689ef2"><div class="source"><a href="https://stmeathammer.github.io/People-tobacco/">https://stmeathammer.github.io/People-tobacco/</a></div></figure><figure id="07c23863-fb24-436e-8eea-93136c7a2a01"><a href="https://stmeathammer.github.io/People-tobacco/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">PEOPLE табак</div><div class="bookmark-description">Отличные характеристики вкуса, жаростойкость, дымность и крепость. Практически отсутствует мусор, хорошая нарезка и вымочка</div></div><div class="bookmark-href"><img src="https://stmeathammer.github.io/People-tobacco/src/img/favicon.svg" class="icon bookmark-icon"/>https://stmeathammer.github.io/People-tobacco/</div></div></a></figure><hr id="3bc76512-e80e-48cd-8984-6660659d5fd3"/><h2 id="7d9afe13-fea5-4aa5-87f3-f056d07c7e58" class=""><strong>FAIR PARTNER</strong></h2><p id="57b67082-3243-44b0-a193-bc7b80b52d85" class=""><br/>Розробка сайту для Fair Partner. На сайті реалізовано: сторінка-візитка, сторінка запису на страхування здоров&#x27;я та авто, подання заявки працевлаштування, динамічна зміна мови з використання кукі. Інтеграція гугл аналітики, гугл карти, налаштована робота з 1C Bitrix.<br/><br/><strong>Стек технологій</strong>: HTML, CSS, JS, JQuery, Scss, БЕМ-методологія, адаптивна верстка.<br/><br/></p><figure id="cc755502-918b-434f-9610-0d47929c3fbb"><div class="source"><a href="https://fairpartner.pl/">https://fairpartner.pl/</a></div></figure><figure id="9f98245b-e082-4b03-9bdc-01adfa9a88f2"><a href="https://fairpartner.pl/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Fair Partner</div><div class="bookmark-description">Легальная компания, которая за короткое время завоевала доверия больше тысячи курьеров и водителей в Польше. 
+                        Наша цель – качественно выполнять свою работу, благодаря этому мы являемся топ 10 лучших партнеров в Glovo.</div></div><div class="bookmark-href"><img src="https://fairpartner.pl/src/img/favicon.png" class="icon bookmark-icon"/>https://fairpartner.pl/</div></div></a></figure><hr id="45a07d41-94ce-4756-8482-1c75c7e25c42"/><h2 id="5633206f-9b0c-4bb9-b739-fe3661628642" class=""><strong>BATUMI RACING CLUB</strong></h2><p id="f597e655-3aec-4abf-8404-bbe0462abe20" class=""><br/>Сервіс по бронюванню картингів в Грузії. Розроблений багатосторінковий сайт за допомогою CMS Wordpress, на якому реалізовані такі можливості: Сторінка з новинами, запис на заняття онлайн, оренда картингів, оголошення про продаж картингів та запчастин, таблиця лідерів по швидкості, запис до школи водіння картингів.<br/><br/><strong>Стек технологій</strong>: HTML, CSS, JS, JQuery, PHP, Scss, БЕМ-методологія, адаптивна верстка.</p><figure id="34063db6-fdbf-4bd9-9e64-f707023b68a9"><div class="source"><a href="https://batumikarting.ge/">https://batumikarting.ge/</a></div></figure><figure id="9fe2bd55-499e-4c65-9a85-5a80b8dc6bb3"><a href="http://batumikarting.ge/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Batumi Karting Club - BatumiKartingClub</div><div class="bookmark-description">The fastest rental karting in Georgia «Formula 1» starts from karting! Karts Book now Introducing the 400m long track! Outdoor karting track with CIK-FIA standards compliance and De Haart safety system. The base track of the local professional karting team, which also hosts the stage of the Georgian Karting Championship. Professional kart racers nicknamed Monaco […]</div></div><div class="bookmark-href"><img src="https://batumikarting.ge/wp-content/uploads/2022/05/image-3-1.png" class="icon bookmark-icon"/>http://batumikarting.ge/</div></div><img src="https://batumikarting.ge/wp-content/uploads/2022/05/features1-3.webp" class="bookmark-image"/></a></figure><hr id="40079bce-445a-4efb-80ce-515b0e096214"/><h2 id="348db256-7dee-40e4-a1ca-6ae6bd4b2925" class="">Гірлянди до свят</h2><p id="eb274631-b0af-46fa-9deb-0fb9c37f6ccf" class="">
+</p><p id="a1f80721-17e4-41fd-8d57-1bbe30644163" class="">Сайт продажів для онлайн магазину Biko Butik.</p><p id="419f17c7-7a3c-41df-a85d-8701efef8206" class=""><strong>Стек технологій</strong>: HTML, CSS, JS, JQuery, Scss, БЕМ-методологія, адаптивна верстка.</p><figure id="d819eafb-ffee-4383-9fdf-635409db08f0"><div class="source"><a href="https://andrey2528.github.io/garland/">https://andrey2528.github.io/garland/</a></div></figure><figure id="05d27a07-c741-423b-b727-6198fd0f2a94"><a href="https://andrey2528.github.io/garland/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ГІРЛЯНДИ ДО СВЯТ</div><div class="bookmark-description">Починаючи з новорічних гірлянд і вбираючи кожний куток вашого дому, ви шукаєте особливість. Наш магазин пропонує вам найбільший вибір новорічних гірлянд і світлових прикрас.</div></div><div class="bookmark-href">https://andrey2528.github.io/garland/</div></div></a></figure><hr id="5822631f-daa1-44da-840b-243cda326242"/><h2 id="5f0955bd-e997-4155-935c-88dfc53a4780" class="">Шкарпетки Biko Butik</h2><p id="81a14938-23f4-4131-a1fe-1c18614dff3b" class="">
+</p><p id="c8a46046-9593-4e8a-8128-f9c866b3ac3d" class="">Сайт продажів для онлайн магазину Biko Butik.</p><p id="2ca260c5-7f31-4419-9631-c3b397c6ec50" class=""><strong>Стек технологій</strong>: HTML, CSS, JS, JQuery, Scss, БЕМ-методологія, адаптивна верстка.</p><figure id="64effc38-27c8-4e5e-b2ba-1d02ecbd7544"><div class="source"><a href="https://andrey2528.github.io/1_drop_socks/">https://andrey2528.github.io/1_drop_socks/</a></div></figure><figure id="3ebca597-d476-44c2-99ee-670112469677"><a href="https://andrey2528.github.io/1_drop_socks/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Biko Butik</div><div class="bookmark-description">Вашого найкращого джерела модних та стильних трендів!</div></div><div class="bookmark-href"><img src="https://andrey2528.github.io/1_drop_socks/images/logo1.png" class="icon bookmark-icon"/>https://andrey2528.github.io/1_drop_socks/</div></div></a></figure><hr id="0b3c79f5-8019-4289-b2f3-38b28f2ae817"/><h2 id="94293aac-8f28-4a16-b5a8-2f06df10f9a2" class=""><strong>SKETCH2SITE DEVELOPMENT</strong></h2><p id="3a3ad875-d966-461b-b5ed-fbc12ea20aee" class=""><br/>Sketch2Site Development - Портфоліо сайту для української команди розробників для пошуку нових замовлень, орієнтованих на європейський ринок праці.<br/>Стек технологій: HTML, CSS, SCSS, PHP, JS, jQuery, БЕМ-методологія,<br/>адаптивна верстка, кросплатформенність, SEO оптимізація та налаштування, відправка повідомлень з форми Telegram та на e-mail.<br/></p><figure id="f074feb4-b91a-4fae-9213-243ab56f322c"><div class="source"><a href="http://sketch2site.com/">http://sketch2site.com/</a></div></figure><figure id="d2864896-d0a5-436d-bda0-9206c4aadce2"><a href="http://sketch2site.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Sketch2Site Development</div><div class="bookmark-description">Sketch2Site Web Studio: Your trusted digital studio transforming visions into cutting-edge digital products. Specializing in creating websites from scratch, we&#x27;re dedicated to modern web development. Partner with us for bespoke digital solutions</div></div><div class="bookmark-href"><img src="http://sketch2site.com/apple-touch-icon.png" class="icon bookmark-icon"/>http://sketch2site.com/</div></div></a></figure><hr id="936be71a-e509-4734-ac9f-72e22cceba9d"/><h1 id="a05796b5-7557-47a9-9ce1-d0d900d74b5d" class="">СЕРТИФІКАТИ</h1><div id="d2f1ad01-cca6-483e-8469-cf4a5dcd69e3" class="column-list"><div id="68fa8460-ff04-4a30-badc-9c972d5c689d" style="width:50%" class="column"><p id="e1479c4e-9afb-4da3-a9e0-9dc629c61290" class="">Диплом бакалавра зі спеціальності<br/>«Комп’ютерні науки» професійна кваліфікація<br/>«Фахівець з інформаційних технологій»<br/></p></div><div id="61158862-efc0-437b-b6d8-c1a0b14a1d98" style="width:50%" class="column"><p id="a9ccd1ec-45c1-4bfd-9023-0f710df744d9" class="">
+</p></div></div><hr id="89e0ba60-1ab8-4ae4-bbe4-6a6f9851b72d"/><div id="d4c76519-3234-41b3-bca2-1f1b78d64b72" class="column-list"><div id="381234df-8491-4a00-af5e-b2d9d087bd41" style="width:50%" class="column"><figure id="2c5fd072-da32-4ddc-9d8a-ff120253707f" class="image"><a href="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-30-26.png"><img style="width:1138px" src="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-30-26.png"/></a></figure></div><div id="49d36133-12e1-4f97-ad69-5064bc947543" style="width:50%" class="column"><figure id="3bea627f-bc94-4652-bd23-d01fbccce78f" class="image"><a href="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-32-08.png"><img style="width:1139px" src="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-32-08.png"/></a></figure></div></div><hr id="f6b6ff5e-c503-4542-ad0b-f90760273d8f"/><div id="4ef8286a-4158-418d-87e5-0b2d9da9515f" class="column-list"><div id="4a8130a4-364d-484b-9cb5-94ecaab946ce" style="width:50%" class="column"><figure id="5f6288d9-93e5-49da-a5cc-ef11428824e7" class="image"><a href="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-30-52.png"><img style="width:1141px" src="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-30-52.png"/></a></figure></div><div id="2f01902f-52ae-4f11-9075-0ccb121629a2" style="width:50%" class="column"><figure id="53e91e30-fb57-47a0-8fb7-eaaf3795db7e" class="image"><a href="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-31-39.png"><img style="width:1141px" src="%D0%A0%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5%2093ba4f55875d43619a3a61f05480bac4/image_2023-05-26_18-31-39.png"/></a></figure></div></div><hr id="40f0a6c1-f833-4e13-9c10-0b20858ad806"/><p id="a547f935-3690-40b2-b0df-3a8f685fe47c" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
